@@ -33,23 +33,20 @@ You can change the data by default setting a new value. This is the list of all 
 ```sh
 [ad_system title="Spurs bet", type="NBA", ad_info="SPURS +1.5, hurry!"].
 ```
-###SCREENSHOTS
+### SCREENSHOTS
 ```sh
 [ad_system].
 ```
-![Image of NFL]
-https://raw.githubusercontent.com/ahalaburda/bam_ad_plugin/master/bam_ad_system/public/images/Screenshot_NFL.png)
+![Image of NFL](https://raw.githubusercontent.com/ahalaburda/bam_ad_plugin/master/bam_ad_system/public/images/Screenshot_NFL.png)
 ```sh
 [ad_system title="Spurs bet", type="NBA", ad_info="Our NBA Pick: Spurs +3"]
 ```
-![Image of NBA]
-(https://raw.githubusercontent.com/bam_ad_plugin/blob/master/bam_ad_system/public/images/Screenshot_NBA.png)
+![Image of NBA](https://raw.githubusercontent.com/ahalaburda/bam_ad_plugin/master/bam_ad_system/public/images/Screenshot_NBA.png)
 ```sh
 [ad_system title="mlb bet", type="MLB", ad_info="Our MLB Pick: Dodgers +3"].
 ```
-![Image of MLB]
-(https://raw.githubusercontent.com/bam_ad_plugin/blob/master/bam_ad_system/public/images/Screenshot_MLB.png)
+![Image of MLB](https://raw.githubusercontent.com/ahalaburda/bam_ad_plugin/master/bam_ad_system/public/images/Screenshot_MLB.png)
 
-#####TODO DO
+##### TODO DO
 - [ ] Admin view
 - [ ] Improve Syntax code
