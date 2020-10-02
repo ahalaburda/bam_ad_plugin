@@ -58,19 +58,19 @@ function ad_system($atts) {
 						<div class="remaining_time" id="clock">
 							<div>
 							<div class="clock_text">Days</div>
-							<span class="days" id="days_remaining">%s</span>
+							<span class="days" id="days_remaining" value="%s">%s</span>
 							</div>
 							<div>
 							<div class="clock_text">Hours</div>
-							<span class="hours" id="hours_remaining">%s</span>
+							<span class="hours" id="hours_remaining" value="%s">%s</span>
 							</div>
 							<div>
 							<div class="clock_text">Minutes</div>
-							<span class="minutes" id="minutes_remaining">%s</span>
+							<span class="minutes" id="minutes_remaining" value="%s">%s</span>
 							</div>
 							<div>
 							<div class="clock_text">Seconds</div>
-							<span class="seconds" id="seconds_remaining">%s</span>
+							<span class="seconds" id="seconds_remaining" value="%s">%s</span>
 							</div>
 						</div>
 						<div class="title">
@@ -92,8 +92,12 @@ function ad_system($atts) {
 				',
 				$url_image,
 				$countdown_days,
+				$countdown_days,
+				$countdown_hours,
 				$countdown_hours,
 				$countdown_minutes,
+				$countdown_minutes,
+				$countdown_seconds,
 				$countdown_seconds,
 				$ad_info,
 				$ad_message,
