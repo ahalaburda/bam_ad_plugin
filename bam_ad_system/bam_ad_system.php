@@ -1,14 +1,23 @@
 <?php 
 
-/*
-Plugin Name: Ad System for WordPress
-Plugin URI: https://www.bornagainmedia.com/
-Description: Basic Ad System for WordPress during Full Stack Engineer (LATAM) interview process.
-Author: Adrian Halaburda
-Version: 0.1
-Author URI: https://github.com/ahalaburda
-*/
-
+/**
+ * Basic Ad System for WordPress
+ *
+ * @package   Ad_System_for_WordPress
+ * @author    Adrian Halaburda <adh761@gmail.com>
+ * @link      https://github.com/ahalaburda/bam_ad_plugin
+ * @copyright 2020 Adrian Halaburda
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Ad System for WordPress
+ * Plugin URI:        https://github.com/ahalaburda/bam_ad_plugin
+ * Description:       Basic responsive Ad System for WordPress coded during Born Again Media LLC interview process.
+ * Version:           0.1
+ * Author:            Adrian Halaburda
+ * Author URI:        https://github.com/ahalaburda/bam_ad_plugin
+ * GitHub Plugin URI: https://github.com/ahalaburda/bam_ad_plugin
+ * GitHub Branch:     master
+ */
 
 function ad_system($atts) {
 	wp_enqueue_style('mystyle', plugins_url('/public/css/mystyle.css', __FILE__));
@@ -17,7 +26,7 @@ function ad_system($atts) {
 	// Arguments used for the ad with default data.
 	$args = shortcode_atts(array(
 		'title' => 'New Ad',
-		'type' => 'nba',
+		'type' => 'nfl',
 		'template' => 'default',
 		'backgroundColor' => '#fff',
 		'url_image' => '/public/images/nfl.png',
