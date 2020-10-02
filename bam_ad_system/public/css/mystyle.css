@@ -1,6 +1,6 @@
 .BAM_ad{
 	font-family: Arial;
-	background-color: black !important;
+	background-color: black;
 	width: 100%;
 	max-width: 92rem;
 	display: grid;
@@ -12,6 +12,12 @@
 }
 
 /*left*/
+.BAM_ad_left{
+   background-repeat: no-repeat;
+   background-position: initial;
+   -webkit-background-size: cover;
+   background-size: 100% 100%;
+}
 .BAM_ad_left > img {
   max-width: 100%;
   max-height: 100%;
