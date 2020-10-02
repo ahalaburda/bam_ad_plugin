@@ -17,7 +17,7 @@ function ad_system($atts) {
 
 	$args = shortcode_atts(array(
 		'title' => 'New Ad',
-		'type' => 'default',
+		'type' => 'NFL',
 		'template' => 'default',
 		'backgroundColor' => '#fff',
 		'url_image' => 'https://images-na.ssl-images-amazon.com/images/I/61jq6q0FyJL._AC_SY679_.jpg',
@@ -50,7 +50,7 @@ function ad_system($atts) {
 	$button_phrase =  $args["button_phrase"];
 
 		printf('
-				<div class="BAM_ad">
+				<div class="BAM_ad" >
 					<div class="cell BAM_ad_left">
 						<img src="%s">
 					</div>
@@ -90,6 +90,7 @@ function ad_system($atts) {
 					</div>
 				</div>
 				',
+				
 				$url_image,
 				$countdown_days,
 				$countdown_days,
