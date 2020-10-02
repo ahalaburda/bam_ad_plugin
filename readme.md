@@ -38,14 +38,18 @@ You can change the data by default setting a new value. This is the list of all 
 [ad_system].
 ```
 ![Image of NFL]
-(https://github.com/ahalaburda/bam_ad_plugin/blob/master/bam_ad_system/public/images/Screenshot_NFL.png)
+https://raw.githubusercontent.com/ahalaburda/bam_ad_plugin/master/bam_ad_system/public/images/Screenshot_NFL.png)
 ```sh
 [ad_system title="Spurs bet", type="NBA", ad_info="Our NBA Pick: Spurs +3"]
 ```
 ![Image of NBA]
-(https://github.com/ahalaburda/bam_ad_plugin/blob/master/bam_ad_system/public/images/Screenshot_NBA.png)
+(https://raw.githubusercontent.com/bam_ad_plugin/blob/master/bam_ad_system/public/images/Screenshot_NBA.png)
 ```sh
 [ad_system title="mlb bet", type="MLB", ad_info="Our MLB Pick: Dodgers +3"].
 ```
 ![Image of MLB]
-(https://github.com/ahalaburda/bam_ad_plugin/blob/master/bam_ad_system/public/images/Screenshot_MLB.png)
+(https://raw.githubusercontent.com/bam_ad_plugin/blob/master/bam_ad_system/public/images/Screenshot_MLB.png)
+
+#####TODO DO
+- [ ] Admin view
+- [ ] Improve Syntax code
