@@ -3,7 +3,7 @@
 /*
 Plugin Name: Ad System for WordPress
 Plugin URI: https://www.bornagainmedia.com/
-Description: Basic Ad System for WordPress during  Full Stack Engineer (LATAM) interview process.
+Description: Basic Ad System for WordPress during Full Stack Engineer (LATAM) interview process.
 Author: Adrian Halaburda
 Version: 0.1
 Author URI: https://github.com/ahalaburda
@@ -13,14 +13,14 @@ Author URI: https://github.com/ahalaburda
 function ad_system($atts) {
 	wp_enqueue_style('mystyle', plugins_url('/public/css/mystyle.css', __FILE__));
 	wp_enqueue_script('app', plugins_url('/public/js/app.js', __FILE__), array('jquery'), null, true );
-	
 
+	// Arguments used for the ad with default data.
 	$args = shortcode_atts(array(
 		'title' => 'New Ad',
-		'type' => 'NFL',
+		'type' => 'nba',
 		'template' => 'default',
 		'backgroundColor' => '#fff',
-		'url_image' => 'https://images-na.ssl-images-amazon.com/images/I/61jq6q0FyJL._AC_SY679_.jpg',
+		'url_image' => '/public/images/nfl.png',
 		'countdown_days' => '00',
 		'countdown_hours' => '04',
 		'countdown_minutes' => '00',
@@ -29,7 +29,6 @@ function ad_system($atts) {
 		'ad_message' => 'Hurry up! 25 people have placed this bet',
 		'button_name' => 'BET & WIN',
 		'button_phrase' => 'Trusted Sportsbetting.ag',
-		'' => '',
 	),$atts);
 
 	$ad_title = $args["title"];
@@ -48,11 +47,69 @@ function ad_system($atts) {
 	$ad_info  =  $args["ad_info"];
 	$button_name  =  $args["button_name"];
 	$button_phrase =  $args["button_phrase"];
+	//Upper case the string used to avoid problems with conditional statement
+	$ad_type =strtoupper($ad_type);
+	// Conditional used to change style property depending on which type of ad is selected
+	switch ($ad_type) {
+		case 'NFL':
+			$ad_backgroundColor = $args["#000000"];
+			$url_image = $args["/public/images/nfl.png"];
 
+			?>
+			<style type="text/css">
+				.BAM_ad{
+						background-color: #000 !important;
+					}
+				.BAM_ad_left{
+						background-image: url(<?php echo plugins_url('/public/images/nfl.png', __FILE__); ?>);
+					}
+			</style>
+			<?php 
+			break;
+		case 'NBA':
+			$ad_backgroundColor = $args["#fa6838"];
+				?>
+				<style type="text/css">
+					.BAM_ad{
+	   					background-color: #fa6838 !important;
+	   				}
+					.BAM_ad_left{
+	   					background-image: url(<?php echo plugins_url('/public/images/nba.jpg', __FILE__); ?>);
+	   				}
+				</style>
+				<?php
+			break;
+		case 'MLB':
+			$ad_backgroundColor = $args["#000088"];
+			?>
+				<style type="text/css">
+					.BAM_ad{
+						background-color: #000088 !important;
+					}
+					.BAM_ad_left{
+						background-image: url(<?php echo plugins_url('/public/images/mlb.png', __FILE__); ?>);
+					}
+				</style>
+			<?php
+			break;
+		default:
+			?>
+				<style type="text/css">
+					.BAM_ad{
+	   					background-color: #fa6838 !important;
+	   				}
+					.BAM_ad_left{
+	   					background-image: url(<?php echo plugins_url('/public/images/nba.jpg', __FILE__); ?>);
+	   				}
+				</style>
+				<?php
+			break;
+	}
+	//Show the HTML with the arguments set before to be rendered at the browser
 		printf('
 				<div class="BAM_ad" >
 					<div class="cell BAM_ad_left">
-						<img src="%s">
+					
 					</div>
 					<div class="cell BAM_ad_center">
 						<div class="remaining_time" id="clock">
@@ -91,7 +148,6 @@ function ad_system($atts) {
 				</div>
 				',
 				
-				$url_image,
 				$countdown_days,
 				$countdown_days,
 				$countdown_hours,
