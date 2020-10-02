@@ -28,5 +28,5 @@ You can change the data by default setting a new value. This is the list of all 
 
 #### Example:
 ```sh
-[ad_sytem title="Soocer bet", ad_info="Real Madrid is +3 now, hurry!"].
+[ad_system title="Soocer bet", ad_info="Real Madrid is +3 now, hurry!"].
 ```
