@@ -23,7 +23,7 @@
 	margin-left: 5%;
 }
 .title > span{
-	font-size: 1.5rem;
+	font-size: 2rem;
 	color: #e8e739;
 	font-weight: bold;
 }
@@ -31,14 +31,13 @@
 	font-size: 13px;
 	color: #c1c1c1;
 }
-
 #clock{
 	font-family: sans-serif;
 	color: #fff;
-	display: inline-block;
+	display: initial;
 	font-weight: 100;
 	text-align: center;
-	font-size: 30px;
+	font-size: 1.5rem;
 }
 #clock > div{
 	padding: 1%;
