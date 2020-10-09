@@ -1,4 +1,4 @@
-# Born Again Media - Adrian Halaburda
+## Simple Advertisement Plugin
 
 #### Ad System for WordPress
 
@@ -50,3 +50,7 @@ You can change the data by default setting a new value. This is the list of all 
 ##### TODO DO
 - [ ] Admin view
 - [ ] Improve Syntax code
+- [ ] Fix responsive issues
+- [ ] Add url value to the button
+- [ ] Custom Database
+- [ ] Publish
